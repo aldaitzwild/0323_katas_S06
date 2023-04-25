@@ -9,3 +9,17 @@
  * 2/ Afficher les éléments retournés par la fonction sous la forme : 
  * => X - X - X - X - X ...
  */
+
+ function getRange(int $limit): array
+ {
+    if($limit < 0) return [];
+    
+    $range = range(0, $limit);
+    shuffle($range);
+    return $range;
+ }
+
+ echo implode(' - ', getRange(5)) . PHP_EOL;
+ echo implode(' - ', getRange(8)) . PHP_EOL;
+ echo implode(' - ', getRange(0)) . PHP_EOL;
+ echo implode(' - ', getRange(-4)) . PHP_EOL;

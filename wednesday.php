@@ -1,7 +1,7 @@
 <?php
 /**
  * Compléter la fonction whoIsTheWinner() pour afficher le gagnant
- * des grilles passées en paramètre (ou "personne" s'il n'y pas de gagnant) 
+ * des grilles de morpion passées en paramètre (ou "personne" s'il n'y pas de gagnant) 
  */
 
  function whoIsTheWinner(array $grid): string

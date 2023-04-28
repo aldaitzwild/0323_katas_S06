@@ -11,3 +11,14 @@ $birthDates = [
     ['year' => 1985, 'month' => 4, 'day' => 28],
     ['year' => 1955, 'month' => 3, 'day' => 17],
 ];
+
+foreach($birthDates as $birthDate) {
+    $date = new DateTime();
+    $date->setDate($birthDate['year'], $birthDate['month'], $birthDate['day']);
+    $age = ($date->diff(new DateTime()))->y;
+
+    echo 'la personne née le ' . $birthDate['day'] .
+    '/' . $birthDate['month'] .
+    '/' . $birthDate['year'] . 
+    ' est agée de ' . $age . ' ans' . PHP_EOL;
+}
